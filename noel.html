@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <style>
+
+        * { 
+            padding: 0%; 
+            margin: 0%; 
+            box-sizing: border-box; 
+        } 
+
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            width: 100vw; 
+            height: 100vh; 
+            overflow-x: hidden; 
+        }
+        video{
+            width: 50%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="myVideo" autoplay>
+        <source src="video.mp4" type="video/mp4">
+        
+    </video>
+    <script> 
+        var video = document.getElementById("myVideo");
+                
+        document.addEventListener("click", function() {
+            playVideo();
+        });
+
+        function playVideo() {
+            video.play();
+            document.removeEventListener("click", playVideo);       
+        }
+    </script>
+
+
+</body>
+</html>
